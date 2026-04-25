@@ -39,7 +39,7 @@ To update the code to suit your purposes, the important parts are as follows:
 
 In `server.py`:
 
-```js
+```python
 # Validate credentials
     if data['username'] == "test" and data['password'] == "1234":
         return jsonify({"status": "success", "message": "Welcome!"}), 200
@@ -49,14 +49,14 @@ In `server.py`:
 
 You can change `"test"` and `"1234"` to whatever you want the username and password to be. Alternatively you can replace this logic entirely if you want to check for a list of possible usernames and password. You will just have to make sure you return:
 
-```js
-return jsonify({ status: "success", message: "Welcome!" }), 200;
+```python
+return jsonify({ status: "success", message: "Welcome!" }), 200
 ```
 
 If valid login details are found, and:
 
-```js
-return jsonify({ status: "invalid", message: "Incorrect credentials" }), 401;
+```python
+return jsonify({ status: "invalid", message: "Incorrect credentials" }), 401
 ```
 
 if invalid if they are invalid.
